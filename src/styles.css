@@ -251,3 +251,40 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 @media (min-width: 769px) {
   .mobile-nav { display: none !important; }
 }
+
+/* ---------- Lock / Login screen ---------- */
+.lock-screen {
+  position: fixed; inset: 0; display: flex; align-items: center; justify-content: center;
+  background: radial-gradient(circle at 30% 20%, #404eed 0%, #1e1f22 60%);
+  padding: 16px;
+}
+.lock-card {
+  width: 100%; max-width: 420px; background: var(--chat);
+  border-radius: 12px; padding: 32px; box-shadow: 0 8px 30px rgba(0,0,0,.5);
+  display: flex; flex-direction: column; align-items: center; text-align: center;
+}
+.lock-logo {
+  width: 80px; height: 80px; border-radius: 24px; background: var(--blurple);
+  display: flex; align-items: center; justify-content: center; margin-bottom: 16px;
+}
+.lock-card h1 { color: var(--text-bright); font-size: 26px; margin-bottom: 8px; }
+.lock-sub { color: var(--text-muted); font-size: 14px; line-height: 1.5; margin-bottom: 20px; }
+.lock-input {
+  width: 100%; background: var(--rail); border: 1px solid transparent; outline: none;
+  border-radius: 6px; padding: 12px 14px; color: var(--text-bright); font-size: 15px;
+  margin-bottom: 12px; transition: border-color .15s;
+}
+.lock-input:focus { border-color: var(--blurple); }
+.lock-strength { width: 100%; display: flex; align-items: center; gap: 10px; margin: -4px 0 12px; font-size: 12px; font-weight: 600; }
+.lock-strength-bar { flex: 1; height: 6px; background: var(--rail); border-radius: 3px; overflow: hidden; }
+.lock-strength-bar span { display: block; height: 100%; border-radius: 3px; transition: width .2s, background .2s; }
+.lock-error { width: 100%; color: #f23f43; font-size: 13px; text-align: left; margin-bottom: 12px; }
+.lock-btn {
+  width: 100%; background: var(--blurple); color: #fff; font-weight: 600; font-size: 15px;
+  padding: 12px; border-radius: 6px; transition: background .15s;
+}
+.lock-btn:hover:not(:disabled) { background: #4752c4; }
+.lock-btn:disabled { opacity: .6; cursor: default; }
+.lock-reset { color: var(--text-muted); font-size: 13px; margin-top: 12px; }
+.lock-reset:hover { color: var(--text); text-decoration: underline; }
+.lock-foot { color: #6d7178; font-size: 11px; margin-top: 20px; }
