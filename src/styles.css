@@ -288,3 +288,12 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .lock-reset { color: var(--text-muted); font-size: 13px; margin-top: 12px; }
 .lock-reset:hover { color: var(--text); text-decoration: underline; }
 .lock-foot { color: #6d7178; font-size: 11px; margin-top: 20px; }
+
+@keyframes lock-shake {
+  0%,100% { transform: translateX(0); }
+  20% { transform: translateX(-10px); }
+  40% { transform: translateX(10px); }
+  60% { transform: translateX(-7px); }
+  80% { transform: translateX(7px); }
+}
+.lock-card.shake { animation: lock-shake .4s; }
